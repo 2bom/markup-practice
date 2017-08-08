@@ -1,0 +1,22 @@
+.clearfix:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.login-form {
+    box-shadow: 2px 2px 1rem lightgray;
+    padding: 30px;
+}
+
+.login-form > h2 {
+    text-align: center;
+}
+
+.login-form .checkbox {
+    float: left;
+}
+.lgoin-form .forget {
+    float: right;
+    text-align: right;
+}
