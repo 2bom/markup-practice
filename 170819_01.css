@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+
+/* Global Defaults */
+ html, body {
+ margin: 0px;
+ padding: 0px;
+ border: 0px;
+ }
+ body {
+ font: 1em/1.25 Arial, Helvetica, sans-serif;
+ }
+ 
+ /* Headlines */
+ h1, h2, h3, h4, h5, h6 {
+ margin: 0;
+ padding: 0;
+ font-weight: normal;
+ font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ /* Text Styles */
+ p, th, td, li, dd, dt, ul, ol, blockquote, q, acronym, abbr, a, input, select, textarea {
+ margin: 0;
+ padding: 0;
+ font: normal normal normal 1em/1.25 Arial, Helvetica, sans-serif;
+ }
+ blockquote {
+ margin: 1.25em;
+ padding: 1.25em
+ }
+ q {
+ font-style: italic;
+ }
+ acronym, abbr {
+ cursor: help;
+ border-bottom: 1px dashed;
+ }
+ small {
+ font-size:.85em;
+ }
+ big {
+ font-size:1.2em;
+ }
+ 
+ /* Links and Images */
+ a, a:link, a:visited, a:active, a:hover {
+ text-decoration: underline;
+ }
+ img {
+ border: none;
+ }
+ 
+ /* Tables */
+ table {
+ margin: 0;
+ padding: 0;
+ border: none;
+ }
+ 
+ /* Forms */
+ form {
+ margin: 0;
+ padding: 0;
+ display: inline;
+ }
+ label {
+ cursor: pointer;
+ }
+ 
+ /* Common Classes */
+ .clear { clear: both; }
+ .floatLeft { float: left; }
+ .floatRight { float: right; }
+ .textLeft { text-align: left; }
+ .textRight { text-align: right; }
+ .textCenter { text-align: center; }
+ .textJustify { text-align: justify; }
+ .blockCenter { display: block; margin-left: auto; margin-right: auto; } /* remember to set width */
+ .bold { font-weight: bold; }
+ .italic { font-style: italic; }
+ .underline { text-decoration: underline; }
+ .noindent { margin-left: 0; padding-left: 0; }
+ .nomargin { margin: 0; }
+ .nopadding { padding: 0; }
+ .nobullet { list-style: none; list-style-image: none; }
+ 
+ 
+/* custom ver mobile */
+body {
+    color: #333;
+}
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none !important;
+}
+a {
+    text-decoration: none !important;
+    color: #333;
+}
+
+.clearfix::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+@media(max-width:960px) {
+    /* header */
+    .header {
+        width: 100vw;
+        height: 300px;
+        /* position absolute는 버린자식, static한 부모는 집나간 자식을 둘 수 없다.
+        아래 .header .subheader가 header 요소를 기준으로 position을 잡을 것이므로 header의 position은 relative가 되어야 함. */
+        position: relative;
+        background-image: url("http://www.goexpopark.com/wp-content/uploads/2015/06/Concerts-in-Philadelphia.jpg");
+        background-size: cover;
+        padding: 10px;
+        color: white;
+    }
+    .header * {
+        /* font-family 속성은 폰트가 적용되는 모든 태그들에 직접 연결되어야한다. 
+            상위요소에서 적용시키려면 안먹음. 적용시킬 대상에 직접 넣어야함. */
+        font-family: 'Rokkitt', serif; 
+    }
+    .header h1 {
+        margin: 12px;
+        font-size: 2.2rem;
+        font-weight: 100;
+    }
+    .header h2 {
+        font-size: 3rem;
+        line-height: 2.5rem;
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+    .header p {
+        margin-bottom: 2px;
+        font-weight: 100;
+        font-size: 1.2rem;
+    }
+    .header .subheader {
+        /* position absolute는 버린자식, static한 부모는 집나간 자식을 둘 수 없다. */
+        /* position absolute에서 위치를 잡을 때는 어떤 조합으로 명령하느냐에 따라 위치를 잡는 기준점이 달라진다. 명령 자체가 기준점을 선언해주는 것.
+            ex/ bottom right 두가지 속성으로 위치를 선언해준다는 건 오른쪽 아래를 기준으로 잡겠다고 선언한 것.*/
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    /* general navbar */
+    .gnb {
+        padding: 20px;
+    }
+    ul.navbar > li {
+        margin: 6px 0;
+        font-size: 0.95rem;
+    }
+    ul.navbar > li > a {
+        color: lightgray;
+    }
+    
+    /* concert card */
+    .page-content {
+        padding: 0 20px;
+    }
+    .card {
+        padding: 20px;
+        box-shadow: 2px 2px 15px #dedede;
+    }
+}

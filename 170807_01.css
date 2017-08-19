@@ -15,8 +15,8 @@
 
 .login-form .checkbox {
     float: left;
+    margin: 0px;
 }
-.lgoin-form .forget {
+.login-form .forget {
     float: right;
-    text-align: right;
 }
